@@ -1,0 +1,265 @@
+* {
+    font-size: 18px;
+}
+
+div.sectionHeader {
+    font-size: 20px;
+}
+
+div.descCol {
+    width: 25%;
+    float: left;
+}
+
+div.valCol {
+    width: 40%;
+    float: left;
+}
+
+div.dataMainDiv div.rowDiv {
+    margin: 4px 0px 4px 20px;
+    height: 20px;
+}
+
+div.section {
+    margin: 20px 20px 0px 20px;
+}
+
+div.dataMainDiv div.editValCol>input {
+    font-size: 11px;
+    width: 250px;
+}
+
+button.colorChanger {
+    border-width: 2px;  
+    border-style: outset;
+    height: 20px;
+    width: 20px;
+}
+
+span.colorsEditor {
+    margin: 5px 0px 0px 35px;
+}
+
+/************************** EXPERIENCE ****************************/
+
+div.experienceMainDiv {
+    margin-bottom: -10px;
+}
+div.experienceMainDiv div.valCol {
+    width: 100px;
+    /* margin: 2px 0px 0px 0px; */
+    float: left;
+}
+
+div.experienceMainDiv div.valCol.date {
+    width: 50px;
+}
+
+div.experienceMainDiv div.editDate {
+    float: left;
+    margin-top: -2px;
+}
+
+div.experienceMainDiv div.editDate>input {
+    font-size: 13px;
+    width: 48px;
+}
+
+div.experienceMainDiv div.editPosition {
+    float: left;
+    margin-top: -2px;
+    margin-left: 20px;
+}
+
+div.experienceMainDiv div.editPosition>input {
+    font-size: 13px;
+    width: 250px;
+}
+
+div.experienceMainDiv div.editTask {
+    float: left;
+    margin-top: -2px;
+}
+
+div.experienceMainDiv div.editTask>input {
+    font-size: 12px;
+    width: 350px;
+}
+
+div.experienceMainDiv div.valCol.date>div {
+    font-size: 16px;
+}
+
+div.experienceMainDiv div.dateDash {
+    float: left;
+    margin: 0px 4px 0px 4px;
+    font-size: 16px;
+}
+
+div.experienceMainDiv div.valCol.position {
+    width: 340px;
+    margin: -1px 0px 0px 19px;
+    font-weight: bold;
+}
+
+div.experienceMainDiv ul.tasks {
+    margin: 0px 0px 10px 0px;
+}
+
+div.experienceMainDiv ul.tasksEditMode {
+    margin: 0px 0px 10px 0px;
+}
+
+div.experienceMainDiv li {
+    list-style-type: circle;
+    font-size: 14px;
+    margin: 0px 0px 0px 110px;
+}
+
+div.experienceMainDiv div.valCol.task {
+    width: 360px;
+    margin: 0px 0px 0px 0px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+div.experienceMainDiv div.valCol.task * {
+    font-size: 14px;
+}
+
+div.experienceMainDiv div.rowDiv {
+    margin: 4px 0px 4px 20px;
+}
+
+div.experienceMainDiv div.datesForExp {
+    /* width: 200px; */
+}
+
+div.experienceMainDiv button.taskRemove {
+    height: 17px;
+    width: 17px;
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+div.experienceMainDiv button.expRemove {
+    height: 17px;
+    width: 17px;
+    margin-left: 5px;
+    font-size: 10px;
+    float: left;
+}
+
+div.experienceMainDiv button.addTask {
+    height: 17px;
+    width: 17px;
+    margin-left: 78px;
+    font-size: 10px;
+    float: left;
+}
+
+div.experienceMainDiv button.addExp {
+    height: 17px;
+    width: 17px;
+    margin: -11px 0px 0px 20px;
+    font-size: 10px;
+}
+
+div.experienceMainDiv button.expMove {
+    height: 17px;
+    width: 17px;
+    margin-left: -18px;
+    font-size: 10px;
+    float: left;
+}
+
+div.experienceMainDiv button.expMoveUp,
+div.experienceMainDiv button.expMoveDown {
+    height: 24px;
+    width: 26px;
+    font-size: 12px;
+}
+
+div.experienceMainDiv div.moveExpButtons {
+    height: 0px;
+}
+
+/************************** SKILLS ****************************/
+
+div.skillsMainDiv div.skillsAndProgress {
+    margin-left: 20px;
+}
+
+div.skillsMainDiv div.skillName {
+    min-height: 1px;
+    width: 114px;
+    float: left;
+    overflow: hidden;
+}
+
+div.skillsMainDiv div.skillName>div {
+    font-size: 16px;
+}
+
+div.skillsMainDiv div.skillProgress {
+    width: 200px;
+    float: left;
+    margin-left: 18px;
+}
+
+div.skillsMainDiv div.progress {
+    width: 100%;
+    background-color: #D2D2D2;
+}
+
+div.skillsMainDiv div.bar {
+	height: 12px;
+    margin-top: 4px;
+}
+
+div.skillsMainDiv div.editSkillName {
+    float: left;
+    margin-top: -2px;
+}
+
+div.skillsMainDiv div.editSkillName>input {
+    font-size: 13px;
+    width: 110px;
+}
+
+div.skillsMainDiv div.skillRow {
+    margin: 4px 0px 0px 0px;
+}
+
+div.skillsMainDiv div.editSkillVal {
+    float: left;
+    margin-top: -2px;
+}
+
+div.skillsMainDiv div.editSkillVal>input {
+    font-size: 13px;
+    width: 20px;
+    text-align: right;
+}
+
+div.skillsMainDiv button.addSkill {
+    height: 17px;
+    width: 17px;
+    margin: -11px 0px 0px 20px;
+    font-size: 10px;
+}
+
+div.skillsMainDiv button.skillRemove {
+    height: 17px;
+    width: 17px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+div.skillsMainDiv div.editSkillProgress {
+    width: 60px;
+    float: left;
+    margin-left: 18px;
+}
