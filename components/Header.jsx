@@ -16,8 +16,8 @@ class Header extends React.Component {
         };
     };
 
-	componentDidMount() {
-		document.getElementById('changeMode').addEventListener('click', this.props.changeModeFunc, false);
+    componentDidMount() {
+        document.getElementById('changeMode').addEventListener('click', this.props.changeModeFunc, false);
         document.getElementById('changeColorRed').addEventListener('click', () => {this.props.changePageColorFunc('red')}, false);
         document.getElementById('changeColorBlue').addEventListener('click', () => {this.props.changePageColorFunc('blue')}, false);
         document.getElementById('changeColorOrange').addEventListener('click', () => {this.props.changePageColorFunc('orange')}, false);

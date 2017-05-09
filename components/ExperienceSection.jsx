@@ -2,6 +2,7 @@ import React from 'react';
 
 import ValueField from './ValueField.jsx';
 import EditField from './EditField.jsx';
+import ExpDataRow from './experience/ExpDataRow.jsx';
 
 import { validateDate, validateLength } from './../validators/validators.js';
 
@@ -159,23 +160,7 @@ class ExperienceSection extends React.Component {
                             </div>
                         </div>
                     ) : (
-                        <div>
-                            <div className={'datesForExp'}>
-                                <ValueField classes={'valCol date'} val={exp.dateFrom} />
-                                <div className={'dateDash'}>-</div>
-                                <ValueField classes={'valCol date'} val={exp.dateTo} />
-                            </div>
-                            <ValueField classes={'valCol position'} val={exp.position} />
-                            <ul className={'tasks'}>
-                            <br />
-                        {exp.tasks.map((task, j) => (
-                            <li key={j}>
-                                <ValueField classes={'valCol task'} val={task} />
-                                <br />
-                            </li>
-                        ))}
-                            </ul>
-                        </div>
+                        <ExpDataRow exp={exp} />
                     )}
                     </div>
                 ))}

@@ -90,9 +90,9 @@ class SkillsSection extends React.Component {
                                 <EditField classes={'editSkillVal'} val={this.calcSkillVal(skill.val)} updateState={this.updateSkillVal.bind(this, skillNr)}/>
                                 <ValueField classes={'slash10'} val={'/ 10'} />
                             </div>
-						{(this.state.skills.length > 1) && (
-							<button className={'skillRemove'} onClick={this.removeSkill.bind(this, skillNr)}>-</button>
-						)}
+                            {(this.state.skills.length > 1) && (
+                                <button className={'skillRemove'} onClick={this.removeSkill.bind(this, skillNr)}>-</button>
+                            )}
                             <br />
                         </div>
                     ) : (

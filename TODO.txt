@@ -1,6 +1,5 @@
 - smaller components (for example - each row in section should be a component)
 - change language to english
-+ try to change commit messages to english
 - data from JSON
 - redux
 - import/export
@@ -9,6 +8,4 @@
 - nicer buttons etc
 - all validation moved to validators in the right folder
 - subfolders for components 
-- node_modules out
-- fix app without node_modules
 
