@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ValueField from './ValueField.jsx';
-import EditField from './EditField.jsx';
+import ValueField from '~/js/components/commons/ValueField.jsx';
+import EditField from '~/js/components/commons/EditField.jsx';
 
-import { validatePhone, validateLength } from './../validators/validators.js';
+import { validatePhone, validateLength } from '~/js/validators/validators.js';
 
 class DataSection extends React.Component {
 

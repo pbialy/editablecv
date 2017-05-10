@@ -1,10 +1,10 @@
 import React from 'react';
 
-import ValueField from './ValueField.jsx';
-import EditField from './EditField.jsx';
-import ExpDataRow from './experience/ExpDataRow.jsx';
+import ValueField from '~/js/components/commons/ValueField.jsx';
+import EditField from '~/js/components/commons//EditField.jsx';
+import ExpDataRow from '~/js/components/experience/ExpDataRow.jsx';
 
-import { validateDate, validateLength } from './../validators/validators.js';
+import { validateDate, validateLength } from '~/js/validators/validators.js';
 
 class ExperienceSection extends React.Component {
 
@@ -27,7 +27,6 @@ class ExperienceSection extends React.Component {
                 position: 'Pomoc doraźna dla Google',
                 tasks: [
                     'stworzenie kodu który uchronił serwis przed przeciążeniem',
-                    //'stworzenie kodu który uchronił serwis przed przeciążeniem, a także przyśpieszył wyszukiwarkę o ok. 40%',
                     'szkolenia dla pracowników'
                 ]
             }, {
