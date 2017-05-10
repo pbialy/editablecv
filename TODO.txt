@@ -8,4 +8,5 @@
 - nicer buttons etc
 - all validation moved to validators in the right folder
 - subfolders for components 
+- path bez .. tylko z dev (nie relatywny)
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ValueField from './../ValueField.jsx';
+import ValueField from '~/js/components/ValueField.jsx';
 
 class ExpDataRow extends React.Component {
 
