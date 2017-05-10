@@ -28,19 +28,8 @@ class Page extends React.Component {
 
 
     render() {
-
-        const myStyle = {
-            backgroundColor: '#FFFFFF',
-            border: 'solid 2px',
-            borderColor: '#979797',
-            width: 595,
-            height: 842,
-            margin: '60px auto 60px auto',
-            overflow: 'hidden'
-        }
-
         return (
-            <div style={myStyle}>
+            <div className='page'>
                 <Header changeModeFunc={this.changeMode} editMode={this.state.editMode} pageColor={this.state.pageColor} changePageColorFunc={this.changePageColor} />
                 <DataSection editMode={this.state.editMode} pageColor={this.state.pageColor} />
                 <ExperienceSection editMode={this.state.editMode} pageColor={this.state.pageColor} />

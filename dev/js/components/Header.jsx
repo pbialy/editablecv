@@ -41,15 +41,8 @@ class Header extends React.Component {
     };
 
     render() {
-        const myStyle = {
-            backgroundColor: this.props.pageColor,
-            width: '100%',
-            height: '92px',
-            display: 'inline-table'
-        }
-
         return (
-            <div style={myStyle}>
+            <div className='header' style={{backgroundColor: this.props.pageColor}}>
             {this.props.editMode ? (
                 <div style={{margin: '10px 20px 0px 20px'}}>
                     <EditField styles={{fontSize:'26px', width:'250px'}} val={this.state.name} updateState={this.updateState.bind(this, 'name')} />
@@ -62,7 +55,7 @@ class Header extends React.Component {
                         <button id='changeColorOrange' className={'colorChanger'} style={{backgroundColor:'orange'}} />
                         <button id='changeColorGreen' className={'colorChanger'} style={{backgroundColor:'green'}} />
                     </span>
-                    <button id='changeMode' style={{float:'right', margin:'5px 20px 0px 0px', fontSize:'20px', width:'100px'}}>Apply</button>
+                    <button id='changeMode'>Apply</button>
                 </div>
             ) : (
                 <div style={{margin: '10px 20px 0px 20px'}}>
@@ -76,7 +69,7 @@ class Header extends React.Component {
                         <button id='changeColorOrange' />
                         <button id='changeColorGreen' />
                     </span>
-                    <button id='changeMode' style={{float:'right', margin:'5px 20px 0px 0px', fontSize:'20px', width:'100px'}}>Edit</button>
+                    <button id='changeMode'>Edit</button>
                 </div>
             )}
             </div>

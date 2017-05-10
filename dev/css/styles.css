@@ -2,6 +2,22 @@
     font-size: 18px;
 }
 
+div.page {
+	background-color: #FFFFFF;
+	border: solid 2px;
+	border-color: #979797;
+	width: 595px;
+	height: 842px;
+	margin: 60px auto 60px auto;
+	overflow: hidden;
+}
+
+div.header {
+	width: 100%;
+	height: 92px;
+	display: inline-table;
+}
+
 div.sectionHeader {
     font-size: 20px;
 }
@@ -39,6 +55,13 @@ button.colorChanger {
 
 span.colorsEditor {
     margin: 5px 0px 0px 35px;
+}
+
+button#changeMode {
+	float: right;
+    margin: 5px 20px 0px 0px;
+    font-size: 20px;
+    width: 100px;
 }
 
 /************************** EXPERIENCE ****************************/
