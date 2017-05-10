@@ -19,7 +19,7 @@ class Header extends React.Component {
         document.getElementById('changeColorBlue').addEventListener('click', () => {this.props.changePageColorFunc('blue')}, false);
         document.getElementById('changeColorOrange').addEventListener('click', () => {this.props.changePageColorFunc('orange')}, false);
         document.getElementById('changeColorGreen').addEventListener('click', () => {this.props.changePageColorFunc('green')}, false);
-	}
+    }
 
     validateKey(key, value) {
         if (key === 'name' || key === 'surname') {

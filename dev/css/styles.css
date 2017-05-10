@@ -3,19 +3,19 @@
 }
 
 div.page {
-	background-color: #FFFFFF;
-	border: solid 2px;
-	border-color: #979797;
-	width: 595px;
-	height: 842px;
-	margin: 60px auto 60px auto;
-	overflow: hidden;
+    background-color: #FFFFFF;
+    border: solid 2px;
+    border-color: #979797;
+    width: 595px;
+    height: 842px;
+    margin: 60px auto 60px auto;
+    overflow: hidden;
 }
 
 div.header {
-	width: 100%;
-	height: 92px;
-	display: inline-table;
+    width: 100%;
+    height: 92px;
+    display: inline-table;
 }
 
 div.sectionHeader {
@@ -58,10 +58,15 @@ span.colorsEditor {
 }
 
 button#changeMode {
-	float: right;
+    float: right;
     margin: 5px 20px 0px 0px;
     font-size: 20px;
     width: 100px;
+}
+
+div.editFieldMainDiv,
+div.valueFieldMainDiv{
+    display: inline-block;
 }
 
 /************************** EXPERIENCE ****************************/
@@ -238,7 +243,7 @@ div.skillsMainDiv div.progress {
 }
 
 div.skillsMainDiv div.bar {
-	height: 12px;
+    height: 12px;
     margin-top: 4px;
 }
 
