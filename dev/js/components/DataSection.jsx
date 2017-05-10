@@ -2,6 +2,7 @@ import React from 'react';
 
 import ValueField from '~/js/components/commons/ValueField.jsx';
 import EditField from '~/js/components/commons/EditField.jsx';
+import DataReadonlyRow from '~/js/components/data/DataReadonlyRow.jsx';
 
 import { validatePhone, validateLength } from '~/js/validators/validators.js';
 
@@ -44,41 +45,31 @@ class DataSection extends React.Component {
                 <div className={'section'}>
                     <ValueField classes={'sectionHeader'} val={'Dane kontaktowe'} styles={{color:this.props.pageColor}} />
                     <br />
-                    <div className='rowDiv'>
-                        <ValueField classes={'descCol'} val={'Telefon'} />
-                    {this.props.editMode ? (
-                        <EditField classes={'editValCol'} id={'phone'} val={this.state.phone} updateState={this.updateState.bind(this, 'phone')} />
-                    ) : (
-                        <ValueField classes={'valCol'} val={this.state.phone} />
-                    )}
-                        <br />
+                {this.props.editMode ? (
+                    <div>
+                        <div className='rowDiv'>
+                            <ValueField classes={'descCol'} val={'Telefon'} />
+                            <EditField classes={'editValCol'} id={'phone'} val={this.state.phone} updateState={this.updateState.bind(this, 'phone')} />
+                            <br />
+                        </div>
+                        <div className='rowDiv'>
+                            <ValueField classes={'descCol'} val={'E-mail'} />
+                            <EditField classes={'editValCol'} val={this.state.email} updateState={this.updateState.bind(this, 'email')} />
+                            <br />
+                        </div>
+                        <div className='rowDiv'>
+                            <ValueField classes={'descCol'} val={'Strona WWW'} />
+                            <EditField classes={'editValCol'} val={this.state.www} updateState={this.updateState.bind(this, 'www')} />
+                            <br />
+                        </div>
+                        <div className='rowDiv'>
+                            <ValueField classes={'descCol'} val={'Twitter'} />
+                            <EditField classes={'editValCol'} val={this.state.twitter} updateState={this.updateState.bind(this, 'twitter')} />
+                        </div>
                     </div>
-                    <div className='rowDiv'>
-                        <ValueField classes={'descCol'} val={'E-mail'} />
-                    {this.props.editMode ? (
-                        <EditField classes={'editValCol'} val={this.state.email} updateState={this.updateState.bind(this, 'email')} />
-                    ) : (
-                        <ValueField classes={'valCol'} val={this.state.email} />
-                    )}
-                        <br />
-                    </div>
-                    <div className='rowDiv'>
-                        <ValueField classes={'descCol'} val={'Strona WWW'} />
-                    {this.props.editMode ? (
-                        <EditField classes={'editValCol'} val={this.state.www} updateState={this.updateState.bind(this, 'www')} />
-                    ) : (
-                        <ValueField classes={'valCol'} val={this.state.www} />
-                    )}
-                        <br />
-                    </div>
-                    <div className='rowDiv'>
-                        <ValueField classes={'descCol'} val={'Twitter'} />
-                    {this.props.editMode ? (
-                        <EditField classes={'editValCol'} val={this.state.twitter} updateState={this.updateState.bind(this, 'twitter')} />
-                    ) : (
-                        <ValueField classes={'valCol'} val={this.state.twitter} />
-                    )}
-                    </div>
+                ) : (
+                    <DataReadonlyRow data={this.state} />
+                )}
                 </div>
             </div>
         );

@@ -2,7 +2,8 @@ import React from 'react';
 
 import ValueField from '~/js/components/commons/ValueField.jsx';
 import EditField from '~/js/components/commons//EditField.jsx';
-import ExpDataRow from '~/js/components/experience/ExpDataRow.jsx';
+import ExpReadonlyRow from '~/js/components/experience/ExpReadonlyRow.jsx';
+import ExpEditRow from '~/js/components/experience/ExpEditRow.jsx';
 
 import { validateDate, validateLength } from '~/js/validators/validators.js';
 
@@ -43,6 +44,13 @@ class ExperienceSection extends React.Component {
             }]
         };
         this.addExp = this.addExp.bind(this);
+        this.updateState = this.updateState.bind(this);
+        this.removeExp = this.removeExp.bind(this);
+        this.addTask = this.addTask.bind(this);
+        this.moveExpUp= this.moveExpUp.bind(this);
+        this.moveExpDown= this.moveExpDown.bind(this);
+        this.updateStateFromList = this.updateStateFromList.bind(this);
+        this.removeTask = this.removeTask.bind(this);
     };
 
     validateKey(key, value) {
@@ -92,15 +100,15 @@ class ExperienceSection extends React.Component {
         this.setState({ experiences: this.state.experiences })
     };
 
-    moveExpDown(expNr) {
-        const movedExp = this.state.experiences.splice(expNr, 1)[0];
-        this.state.experiences.splice(expNr+1, 0, movedExp);
-        this.setState({ experiences: this.state.experiences })
-    };
-
     moveExpUp(expNr) {
         const movedExp = this.state.experiences.splice(expNr, 1)[0];
         this.state.experiences.splice(expNr-1, 0, movedExp);
+        this.setState({ experiences: this.state.experiences })
+    };
+
+    moveExpDown(expNr) {
+        const movedExp = this.state.experiences.splice(expNr, 1)[0];
+        this.state.experiences.splice(expNr+1, 0, movedExp);
         this.setState({ experiences: this.state.experiences })
     };
 
@@ -124,42 +132,13 @@ class ExperienceSection extends React.Component {
                 {this.state.experiences.map((exp, expNr) => (
                     <div className='rowDiv' key={expNr}>
                     {this.props.editMode ? (
-                        <div>
-                            <div className={'datesForExp'}>
-                                <EditField classes={'editDate'} val={exp.dateFrom} updateState={this.updateState.bind(this, expNr, 'dateFrom')}/>
-                                <div className={'dateDash'}>-</div>
-                                <EditField classes={'editDate'} val={exp.dateTo} updateState={this.updateState.bind(this, expNr, 'dateTo')}/>
-                            </div>
-                            <EditField classes={'editPosition'} val={exp.position} updateState={this.updateState.bind(this, expNr, 'position')}/>
-                        {(this.state.experiences.length > 1) && (
-                            <button className={'expRemove'} onClick={this.removeExp.bind(this, expNr)}>-</button>
-                        )}
-                            <button className={'addTask'} onClick={this.addTask.bind(this, expNr)}>+</button>
-                            <br />
-                            <div className={'moveAndTasks'}>
-                                <div className={'moveExpButtons'}>
-                                {(expNr > 0) && (
-                                    <button className={'expMoveUp'} onClick={this.moveExpUp.bind(this, expNr)}>⮝</button>
-                                )}
-                                {(expNr < this.state.experiences.length - 1) && (
-                                    <button className={'expMoveDown'} onClick={this.moveExpDown.bind(this, expNr)}>⮟</button>
-                                )}
-                                </div>
-                                <ul className={'tasksEditMode'}>
-                                {exp.tasks.map((task, taskNr) => (
-                                    <li key={taskNr}>
-                                        <EditField classes={'editTask'} val={task} updateState={this.updateStateFromList.bind(this, expNr, taskNr, 'task')} />
-                                    {(exp.tasks.length > 1) && (
-                                        <button className={'taskRemove'} onClick={this.removeTask.bind(this, expNr, taskNr)}>-</button>
-                                    )}
-                                        <br />
-                                    </li>
-                                ))}
-                                </ul>
-                            </div>
-                        </div>
+                        <ExpEditRow exp={exp} expNr={expNr} expLen={this.state.experiences.length}
+                            updateState={this.updateState} removeExp={this.removeExp} addTask={this.addTask}
+                            moveExpUp={this.moveExpUp} moveExpDown={this.moveExpDown}
+                            updateStateFromList={this.updateStateFromList} removeTask={this.removeTask}
+                        />
                     ) : (
-                        <ExpDataRow exp={exp} />
+                        <ExpReadonlyRow exp={exp} />
                     )}
                     </div>
                 ))}
