@@ -2,7 +2,7 @@ import React from 'react';
 
 import ValueField from '~/js/components/commons/ValueField.jsx';
 
-class DataReadonlyRow extends React.Component {
+class DataValueRow extends React.Component {
 
     render() {
         const { phone, email, www, twitter } = this.props.data;
@@ -32,4 +32,4 @@ class DataReadonlyRow extends React.Component {
     }
 }
 
-export default DataReadonlyRow
+export default DataValueRow

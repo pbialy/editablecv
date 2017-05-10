@@ -2,7 +2,7 @@ import React from 'react';
 
 import ValueField from '~/js/components/commons/ValueField.jsx';
 import EditField from '~/js/components/commons/EditField.jsx';
-import DataReadonlyRow from '~/js/components/data/DataReadonlyRow.jsx';
+import DataValueRow from '~/js/components/data/DataValueRow.jsx';
 
 import { validatePhone, validateLength } from '~/js/validators/validators.js';
 
@@ -58,7 +58,7 @@ class DataSection extends React.Component {
                         </div>
                     </div>
                 ) : (
-                    <DataReadonlyRow data={this.state} />
+                    <DataValueRow data={this.state} />
                 )}
                 </div>
             </div>

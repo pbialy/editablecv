@@ -2,7 +2,7 @@ import React from 'react';
 
 import ValueField from '~/js/components/commons/ValueField.jsx';
 import EditField from '~/js/components/commons//EditField.jsx';
-import ExpReadonlyRow from '~/js/components/experience/ExpReadonlyRow.jsx';
+import ExpValueRow from '~/js/components/experience/ExpValueRow.jsx';
 import ExpEditRow from '~/js/components/experience/ExpEditRow.jsx';
 
 import { validateDate, validateLength } from '~/js/validators/validators.js';
@@ -103,7 +103,7 @@ class ExperienceSection extends React.Component {
                             updateStateFromList={this.updateStateFromList} removeTask={this.removeTask}
                         />
                     ) : (
-                        <ExpReadonlyRow exp={exp} />
+                        <ExpValueRow exp={exp} />
                     )}
                     </div>
                 ))}

@@ -2,6 +2,7 @@ import React from 'react';
 
 import ValueField from '~/js/components/commons/ValueField.jsx';
 import EditField from '~/js/components/commons/EditField.jsx';
+import SkillsValueRow from '~/js/components/skills/SkillsValueRow.jsx';
 
 import { validateOnlyDigits, validateLength } from '~/js/validators/validators.js';
 
@@ -80,15 +81,7 @@ class SkillsSection extends React.Component {
                             <br />
                         </div>
                     ) : (
-                        <div className={'skillsAndProgress'}>
-                            <ValueField classes={'skillName'} val={skill.name} />
-                            <div className={'skillProgress'}>
-                                <div className={'progress'}>
-                                    <div className={'bar'} style={{width:skill.val, backgroundColor:this.props.pageColor}}></div>
-                                </div>
-                            </div>
-                            <br />
-                        </div>
+                        <SkillsValueRow skill={skill} bgColor={this.props.pageColor} />
                     )}
                     </div>
                 ))}

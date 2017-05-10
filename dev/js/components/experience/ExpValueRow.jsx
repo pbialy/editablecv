@@ -2,7 +2,7 @@ import React from 'react';
 
 import ValueField from '~/js/components/commons/ValueField.jsx';
 
-class ExpReadonlyRow extends React.Component {
+class ExpValueRow extends React.Component {
 
     render() {
         const { dateFrom, dateTo, position, tasks } = this.props.exp;
@@ -28,4 +28,4 @@ class ExpReadonlyRow extends React.Component {
     }
 }
 
-export default ExpReadonlyRow
+export default ExpValueRow
