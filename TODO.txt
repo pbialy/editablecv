@@ -1,11 +1,9 @@
 - smaller components (for example - each row in section should be a component)
-- change language to english
-- data from JSON
+- change language to english (mocks & section names left)
 - redux
 - import/export
 - pass state by props to sections
 - edit & color buttons outside of the A4
 - nicer buttons etc
 - all validation moved to validators in the right folder
-- subfolders for components 
 

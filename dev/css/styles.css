@@ -32,6 +32,12 @@ div.valCol {
     float: left;
 }
 
+div.dataMainDiv {
+    width: 100%;
+    height: 100;
+    display: inline-table;
+}
+
 div.dataMainDiv div.rowDiv {
     margin: 4px 0px 4px 20px;
     height: 20px;
@@ -65,15 +71,53 @@ button#changeMode {
 }
 
 div.editFieldMainDiv,
-div.valueFieldMainDiv{
+div.valueFieldMainDiv {
     display: inline-block;
+}
+
+div.headerMainDiv {
+    margin: 10px 20px 0px 20px;
+}
+
+div.nameEditField>input {
+    font-size: 26px;
+    width: 250px;
+}
+
+div.surnameEditField>input {
+    font-size: 26px;
+    width: 250px;
+    margin-left: 20px;
+}
+
+div.jobEditField>input {
+    font-size: 20px;
+    width: 300px;
+    margin-top: 5px;
+}
+
+div.nameValueField>div {
+    font-size: 32px;
+}
+
+div.surnameValueField>div {
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+div.jobValueField>div {
+    font-size: 24px;
 }
 
 /************************** EXPERIENCE ****************************/
 
 div.experienceMainDiv {
     margin-bottom: -10px;
+    width: 100%;
+    height: 100;
+    display: inline-table;
 }
+
 div.experienceMainDiv div.valCol {
     width: 100px;
     /* margin: 2px 0px 0px 0px; */
@@ -215,6 +259,12 @@ div.experienceMainDiv div.moveExpButtons {
 }
 
 /************************** SKILLS ****************************/
+
+div.skillsMainDiv {
+    width: 100%;
+    height: 100;
+    display: inline-table;
+}
 
 div.skillsMainDiv div.skillsAndProgress {
     margin-left: 20px;

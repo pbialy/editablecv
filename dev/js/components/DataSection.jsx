@@ -30,14 +30,8 @@ class DataSection extends React.Component {
     };
 
     render() {
-        const myStyle = {
-            width: '100%',
-            height: 100,
-            display: 'inline-table'
-        }
-
         return (
-            <div style={myStyle} className='dataMainDiv'>
+            <div className='dataMainDiv'>
                 <div className={'section'}>
                     <ValueField classes={'sectionHeader'} val={'Dane kontaktowe'} styles={{color:this.props.pageColor}} />
                     <br />

@@ -89,14 +89,8 @@ class ExperienceSection extends React.Component {
     };
 
     render() {
-        const myStyle = {
-            width: '100%',
-            height: 100,
-            display: 'inline-table'
-        }
-
         return (
-            <div style={myStyle} className='experienceMainDiv'>
+            <div className='experienceMainDiv'>
                 <div className={'section'}>
                     <ValueField classes={'sectionHeader'} val={'Doświadczenie zawodowe'} styles={{color:this.props.pageColor}} />
                     {this.props.editMode && (<button className={'addExp'} onClick={this.addExp}>+</button>)}

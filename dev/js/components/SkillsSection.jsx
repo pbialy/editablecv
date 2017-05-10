@@ -60,14 +60,8 @@ class SkillsSection extends React.Component {
     }
 
     render() {
-        const myStyle = {
-            width: '100%',
-            height: 100,
-            display: 'inline-table'
-        }
-
         return (
-            <div style={myStyle} className='skillsMainDiv'>
+            <div className='skillsMainDiv'>
                 <div className={'section'}>
                     <ValueField classes={'sectionHeader'} val={'Umiejętności'} styles={{color:this.props.pageColor}} />
                     {this.props.editMode && (<button className={'addSkill'} onClick={this.addSkill}>+</button>)}

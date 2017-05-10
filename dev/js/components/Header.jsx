@@ -41,11 +41,11 @@ class Header extends React.Component {
         return (
             <div className='header' style={{backgroundColor: this.props.pageColor}}>
             {this.props.editMode ? (
-                <div style={{margin: '10px 20px 0px 20px'}}>
-                    <EditField styles={{fontSize:'26px', width:'250px'}} val={this.state.name} updateState={this.updateState.bind(this, 'name')} />
-                    <EditField styles={{fontSize:'26px', width:'250px', marginLeft:'20px'}} val={this.state.surname} updateState={this.updateState.bind(this, 'surname')} />
+                <div className='headerMainDiv'>
+                    <EditField classes={'nameEditField'} val={this.state.name} updateState={this.updateState.bind(this, 'name')} />
+                    <EditField classes={'surnameEditField'} val={this.state.surname} updateState={this.updateState.bind(this, 'surname')} />
                     <br/>
-                    <EditField styles={{fontSize:'20px', width:'300px', marginTop:'5px'}} val={this.state.job} updateState={this.updateState.bind(this, 'job')} />
+                    <EditField classes={'jobEditField'} val={this.state.job} updateState={this.updateState.bind(this, 'job')} />
                     <span className='colorsEditor'>
                         <button id='changeColorRed' className={'colorChanger'} style={{backgroundColor:'red'}} />
                         <button id='changeColorBlue' className={'colorChanger'} style={{backgroundColor:'blue'}} />
@@ -55,11 +55,11 @@ class Header extends React.Component {
                     <button id='changeMode'>Apply</button>
                 </div>
             ) : (
-                <div style={{margin: '10px 20px 0px 20px'}}>
-                    <ValueField styles={{fontSize:'32px'}} val={this.state.name}/>
-                    <ValueField styles={{fontSize:'32px', marginLeft:'10px'}} val={this.state.surname}/>
+                <div className='headerMainDiv'>
+                    <ValueField classes={'nameValueField'} val={this.state.name}/>
+                    <ValueField classes={'surnameValueField'} val={this.state.surname}/>
                     <br/>
-                    <ValueField styles={{fontSize:'24px'}} val={this.state.job}/>
+                    <ValueField classes={'jobValueField'} val={this.state.job}/>
                     <span className='colorsEditor' style={{display:'none'}}>
                         <button id='changeColorRed' />
                         <button id='changeColorBlue' />
