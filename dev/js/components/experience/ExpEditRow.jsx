@@ -11,7 +11,7 @@ class ExpEditRow extends React.Component {
 				<div className={'datesForExp'}>
                     <EditField classes={'editDate'} val={exp.dateFrom} updateState={() => updateState(expNr, 'dateFrom')}/>
 					<div className={'dateDash'}>-</div>
-                    <EditField classes={'editDate'} val={exp.dateTo} updateState={() => updateState(expNr, 'dateTo')}/>
+                    <EditField classes={'editDate'} val={exp.dateTo} updateState={() => {debugger; updateState(expNr, 'dateTo')}}/>
 				</div>
                 <EditField classes={'editPosition'} val={exp.position} updateState={() => updateState(expNr, 'position')}/>
 			{(expLen > 1) && (

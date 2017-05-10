@@ -10,12 +10,8 @@ class DataSection extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            phone: '503112233',
-            email: 'wesoly_romek997@wp.pl',
-            www: 'javascript.crockford.com',
-            twitter: 'twitter.com/boredpanda'
-        };
+        const { phone, email, www, twitter } = this.props.data;
+        this.state = {phone, email, www, twitter};
     };
 
     validateKey(key, value) {

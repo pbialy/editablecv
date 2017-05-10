@@ -8,8 +8,10 @@ class Page extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            editMode: false,
-			pageColor: 'orange'
+            editMode: this.props.data.editMode,
+            pageColor: this.props.data.pageColor
+            // TODO if i want to make some import/export, then whole data should
+            // probably be here
         };
         this.changeMode = this.changeMode.bind(this);
         this.changePageColor = this.changePageColor.bind(this);
@@ -30,10 +32,10 @@ class Page extends React.Component {
     render() {
         return (
             <div className='page'>
-                <Header changeModeFunc={this.changeMode} editMode={this.state.editMode} pageColor={this.state.pageColor} changePageColorFunc={this.changePageColor} />
-                <DataSection editMode={this.state.editMode} pageColor={this.state.pageColor} />
-                <ExperienceSection editMode={this.state.editMode} pageColor={this.state.pageColor} />
-                <SkillsSection editMode={this.state.editMode} pageColor={this.state.pageColor} />
+                <Header data={this.props.data.headerSection} changeModeFunc={this.changeMode} editMode={this.state.editMode} pageColor={this.state.pageColor} changePageColorFunc={this.changePageColor} />
+                <DataSection data={this.props.data.dataSection} editMode={this.state.editMode} pageColor={this.state.pageColor} />
+                <ExperienceSection data={this.props.data.experiencesSection} editMode={this.state.editMode} pageColor={this.state.pageColor} />
+                <SkillsSection data={this.props.data.skillsSection} editMode={this.state.editMode} pageColor={this.state.pageColor} />
             </div>
         );
     }

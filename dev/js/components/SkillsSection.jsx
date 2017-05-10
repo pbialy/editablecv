@@ -10,17 +10,7 @@ class SkillsSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // TODO to w sumie przydałoby się przenieść do jakiś zaślepek
-            skills: [{
-                name: 'Dowodzenie',
-                val: '70%'
-            }, {
-                name: 'Kondycja',
-                val: '100%'
-            }, {
-                name: 'Estetyka',
-                val: '20%'
-            }],
+            skills: this.props.data.skills
         };
         this.addSkill = this.addSkill.bind(this);
     };

@@ -4,7 +4,7 @@ import Page from './dev/js/components/Page.jsx'
 class App extends React.Component {
     render() {
         return (
-            <Page />
+            <Page data={this.props.data} />
         );
     }
 }

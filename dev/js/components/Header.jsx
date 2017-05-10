@@ -9,11 +9,8 @@ class Header extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            name: 'Alojzy',
-			surname: 'Mikser',
-            job: 'Spawacz',
-        };
+        const { name, surname, job } = this.props.data;
+        this.state = {name, surname, job};
     };
 
     componentDidMount() {
