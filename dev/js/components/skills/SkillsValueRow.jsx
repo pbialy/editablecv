@@ -7,15 +7,15 @@ class SkillsValueRow extends React.Component {
     render() {
         const { skill, bgColor } = this.props;
         return (
-			<div className={'skillsAndProgress'}>
-				<ValueField classes={'skillName'} val={skill.name} />
-				<div className={'skillProgress'}>
-					<div className={'progress'}>
-						<div className={'bar'} style={{width:skill.val, backgroundColor:bgColor}}></div>
-					</div>
-				</div>
-				<br />
-			</div>
+            <div className={'skillsAndProgress'}>
+                <ValueField classes={'skillName'} val={skill.name} />
+                <div className={'skillProgress'}>
+                    <div className={'progress'}>
+                        <div className={'bar'} style={{width:skill.val, backgroundColor:bgColor}}></div>
+                    </div>
+                </div>
+                <br />
+            </div>
         )
     }
 }
