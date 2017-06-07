@@ -7,6 +7,8 @@ After pulling repository You need to:
 
 Note that ATM section names and mocks are in polish.
 
+Technology used: React.
+
 Below You can see examples of how this App looks like:
 
 ReadOnly mode
